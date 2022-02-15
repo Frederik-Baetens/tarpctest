@@ -1,0 +1,8 @@
+use tarpctest::run_server;
+
+fn main() {
+    let rt = tokio::runtime::Runtime::new().unwrap();
+    rt.block_on(async {
+        run_server().await;
+    })
+}
